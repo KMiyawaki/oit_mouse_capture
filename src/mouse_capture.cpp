@@ -92,6 +92,8 @@ int main(int argc, char **argv)
     geometry_msgs::Point move;
     while (read(fd, &event, sizeof(event)) == sizeof(event))
     {
+      ROS_INFO_STREAM(ros::this_node::getName() << ": event.type " << event.type);
+      ROS_INFO_STREAM(ros::this_node::getName() << ": event.code " << event.code);
       if (event.type == EV_REL)
       {
         if (event.code == REL_X)
