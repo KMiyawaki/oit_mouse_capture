@@ -1,0 +1,10 @@
+<launch>
+  <node pkg="oit_mouse_capture" type="mouse_capture" name="mouse_capture" output="screen">
+    <param name="device_path" value="auto"/>
+    <param name="process_rate" value="20"/>
+    <rosparam param="mouse_button_replace">
+    left_down: "end"
+    right_down: "start"
+    </rosparam>
+  </node>
+</launch>
